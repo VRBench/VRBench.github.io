@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VRBench: A Benchmark for Multi-Step Reasoning in Long Narrative Videos">
+  <meta name="keywords" content="Evaluation, Benchmark, Dataset, Long Video Understanding, Multi-Step Reasoning, Narrative Videos, Shanghai AI Lab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VRBench: A Benchmark for Multi-Step Reasoning in Long Narrative Videos</title>
+
+<!--   Global site tag (gtag.js) - Google Analytics-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5ZVQZ7NHC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y5ZVQZ7NHC');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="./assets/vrbench/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/vrbench/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/vrbench/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/vrbench/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/vrbench/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/vrbench/js/fontawesome.all.min.js"></script>
+  <script src="./assets/vrbench/js/bulma-carousel.min.js"></script>
+  <script src="./assets/vrbench/js/bulma-slider.min.js"></script>
+  <script src="./assets/vrbench/js/index.js"></script>
+</head>
+<body>
+
+<!-- title -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span style="color:#B9770E; font-weight: bold; font-style: italic">VRBench</span> : A Benchmark for Multi-Step<br>Reasoning in Long Narrative Videos</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+
+              <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=iH0Aq0YAAAAJ&hl=zh-CN" target="_blank">Jiashuo Yu</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                  <a href="_blank" target="_blank">Yue Wu</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                  <a href="_blank" target="_blank">Meng Chu</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="_blank" target="_blank">Zhifei Ren</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                  <a href="_blank" target="_blank">Zizheng Huang</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="_blank" target="_blank">Pei Chu</a><sup>1*</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="_blank" target="_blank">Ruijie Zhang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=EgfF_CEAAAAJ&hl=zh-CN" target="_blank">Yinan He</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank">Qirui Li</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="_blank" target="_blank">Songze Li</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="_blank" target="_blank">Zhenxiang Li</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="_blank" target="_blank">Zhongying Tu</a><sup>1</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="_blank" target="_blank">Conghui He</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://mmlab.siat.ac.cn/yuqiao/index.html" target="_blank">Yu Qiao</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=hD948dkAAAAJ&hl=zh-CN" target="_blank">Yali Wang</a><sup>1,3&#8224</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://shepnerd.github.io/" target="_blank">Yi Wang</a><sup>1&#8224</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://wanglimin.github.io" target="_blank">Limin Wang</a><sup>1,2&#8224</sup>,
+              </span>
+          </div>
+          <!-- <br> -->
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">(* equal contributions, &#8224 corresponding authors) </span>
+        </div>
+
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">
+            <sup>1</sup>
+            Shanghai Artificial Intelligence Laboratory &nbsp;&nbsp;
+            <sup>2</sup>
+            Nanjing University &nbsp;&nbsp;
+            <br>
+            <sup>3</sup>
+            Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences &nbsp;&nbsp;
+          </span>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <!-- <span class="link-block">
+              <a href="" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>Paper(VRBench)</span>
+              </a>
+            </span> -->
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a href="https://github.com/OpenGVLab/VRBench" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </span>
+            <!-- Huggingface Demo Link. -->
+            <!-- <span class="link-block">
+              <a href="https://huggingface.co/spaces/Vchitect/VRBench_Leaderboard" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <img src="assets/vrbench/hf-logo.svg" style="display:block;width:330px;height:240px" />
+                </span>
+                <span>Huggingface Demo</span>
+              </a>
+            </span> -->
+            <!-- Dataset Link. -->
+            <span class="link-block">
+              <a href="https://huggingface.co/datasets/OpenGVLab/VRBench" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <img src="assets/vrbench/hf-logo.svg" style="display:block;width:330px;height:240px" />
+                </span>
+                <span>Dataset</span>
+              </a>
+          </div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- teaser -->
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="width: 50%; max-width: none;">
+      <div class="hero-body">
+            <img src="assets/vrbench/images/teaser_arxiv.jpg" style="width:100%; margin-bottom:10px" alt="Teaser."/>
+      <p style="margin-top: 0;">
+        <b>Overview of VRBench.</b>We present VRBench, a long narrative video benchmark for multi-step reasoning. VRBench includes 1,010 \textbf{manual-filtered narrative videos}, covering 8 languages and 7 video categories that are suitable for reasoning about temporal relations. We also provide~\textbf{high-quality stepwise annotations} for reasoning, which are labeled and reviewed by human experts. Each video incorporates 8-10 complex question-answer pairs, multi-step reasoning chain, and fine-grained timestamps. To fully evaluate the capability of models in multi-step reasoning, we propose a~\textbf{multi-phase evaluation pipeline} that assesses model results both from the process- and outcome-level. Our VRBench is the first video reasoning benchmark that both supports multi-step annotation and evaluation. 
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract. -->
+<!-- <section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered" style="margin-top: 10px; margin-bottom: 0px;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 is-centered">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+              Video generation has witnessed significant advancements, yet evaluating these models remains a challenge. A comprehensive evaluation benchmark for video generation is indispensable for two reasons: 1) Existing metrics do not fully align with human perceptions; 2) An ideal evaluation system should provide insights to inform future developments of video generation. To this end, we present <b>VRBench</b>, a comprehensive benchmark suite that dissects "video generation quality" into specific, hierarchical, and disentangled dimensions, each with tailored prompts and evaluation methods. VRBench has three appealing properties: <b>1) Comprehensive Dimensions</b>: VRBench comprises 16 dimensions in video generation (e.g., subject identity inconsistency, motion smoothness, temporal flickering, and spatial relationship, etc).  The evaluation metrics with fine-grained levels reveal individual models' strengths and weaknesses.  <b>2) Human Alignment</b>: We also provide a dataset of human preference annotations to validate our benchmarks' alignment with human perception, for each evaluation dimension respectively. <b>3) Valuable Insights</b>: We look into current models' ability across various evaluation dimensions, and various content types. We also investigate the gaps between video and image generation models. We will open-source VRBench, including all prompts, evaluation methods, generated videos, and human preference annotations, and also include more video generation models in VRBench to drive forward the field of video generation.
+          </p>
+        </div>
+      </div>
+    </div>
+</section> -->
+<!--/ Abstract. -->
+
+<!-- Abstract. -->
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered" style="margin-top: 10px; margin-bottom: 0px;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 is-centered">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose VRBench, the first long narrative video benchmark crafted for evaluating large models' multi-step reasoning capabilities, addressing limitations in existing evaluations that overlook temporal reasoning and procedural validity. It comprises 1,010 long videos (with an average duration of 1.6 hours), along with 9,468 human-labeled multi-step question-answering pairs and 30,292 reasoning steps with timestamps. These videos are curated via a multi-stage filtering process including expert inter-rater reviewing to prioritize plot coherence. We develop a human-AI collaborative framework that generates coherent reasoning chains, each requiring multiple temporally grounded steps, spanning seven types (e.g., event attribution, implicit inference). VRBench designs a multi-phase evaluation pipeline that assesses models at both the outcome and process levels. Apart from the MCQs for the final results, we propose a progress-level LLM-guided scoring metric to evaluate the quality of the reasoning chain from multiple dimensions comprehensively. Through extensive evaluations of 12 LLMs and 16 VLMs on VRBench, we undertake a thorough analysis and provide valuable insights that advance the field of multi-step reasoning.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+<!--/ Abstract. -->
+
+
+
+<!-- Radar_big -->
+<!-- <section class="section" style="margin-top:-50px; margin-bottom:50px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="section-title">
+          <h2 class="title is-3 is-centered">VRBench Evaluation Results of Video Generative Models</h2>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <div class="publication-img">
+              <img id="architecture" src="assets/vrbench/images/dim_results/fig_paper_radar_big_new.jpg" style="width:600px; margin-top:10px;margin-bottom:10px;"/>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top: 0;">
+          We visualize the evaluation results of four video generation models in 16 VRBench dimensions. We normalize the results per dimension for clearer comparisons.
+        </p>
+        <p class="is-size-7" style="margin-top: 0;">
+          The values have been normalized for better readability of the chart. The normalization process involves scaling each set of performance values to a common scale between 0.3 and 0.8. The formula used for normalization is: (value - min_value) / (max_value - min_value).
+      </p>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- LeaderBoard -->
+<!-- <section class="hero is-light" style="margin-top:-50px; margin-bottom:-50px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="section-title">
+          <h2 class="title is-3 is-centered">Leaderboard</h2>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <iframe
+            src="https://vrbench-vrbench-leaderboard.hf.space"
+            frameborder="0"
+            width="1400"
+            height="700"
+           ></iframe>
+          </div>
+        </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- <section class="section" style="margin-top:-50px; margin-bottom:-70px;">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+
+      <div class="section-title">
+        <h2 class="title is-3">VRBench Evaluation Results per Dimension</h2>
+      </div>
+
+      <div class="table-container">
+        <table class="table" id="RawTable">
+          <thead>
+            <tr>
+              <th scope="col" style="text-align: center;">Model</th>
+              <th scope="col" style="text-align: center;">Subject Consistency</th>
+              <th scope="col" style="text-align: center;">Background Consistency</th>
+              <th scope="col" style="text-align: center;">Temporal Flickering</th>
+              <th scope="col" style="text-align: center;">Motion Smoothness</th>
+              <th scope="col" style="text-align: center;">Dynamic Degree</th>
+              <th scope="col" style="text-align: center;">Aesthetic Quality</th>
+              <th scope="col" style="text-align: center;">Imaging Quality</th>
+              <th scope="col" style="text-align: center;">Object Class</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center; font-weight: bold;">LaVie</td>
+              <td style="text-align: center;">0.9141</td>
+              <td style="text-align: center; font-weight: bold;">0.9747</td>
+              <td style="text-align: center; font-weight: bold;">0.9830</td>
+              <td style="text-align: center;">0.9638</td>
+              <td style="text-align: center;">0.4972</td>
+              <td style="text-align: center; font-weight: bold;">0.5494</td>
+              <td style="text-align: center; font-weight: bold;">0.6190</td>
+              <td style="text-align: center; font-weight: bold;">0.9182</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: bold;">ModelScope</td>
+              <td style="text-align: center;">0.8987</td>
+              <td style="text-align: center;">0.9529</td>
+              <td style="text-align: center;">0.9828</td>
+              <td style="text-align: center;">0.9579</td>
+              <td style="text-align: center;">0.6639</td>
+              <td style="text-align: center;">0.5206</td>
+              <td style="text-align: center;">0.5857</td>
+              <td style="text-align: center;">0.8225</td>
+            </tr>
+            <tr>
+              <td scope="col" style="text-align: center;"><b>VideoCrafter</b></td>
+              <td scope="col" style="text-align: center;">0.8624</td>
+              <td scope="col" style="text-align: center;">0.9288</td>
+              <td scope="col" style="text-align: center;">0.9760</td>
+              <td scope="col" style="text-align: center;">0.9179</td>
+              <td scope="col" style="text-align: center;"><b>0.8972</b></td>
+              <td scope="col" style="text-align: center;">0.4441</td>
+              <td scope="col" style="text-align: center;">0.5722</td>
+              <td scope="col" style="text-align: center;">0.8734</td>
+            </tr>
+            <tr>
+              <td scope="col" style="text-align: center;"><b>CogVideo</b></td>
+              <td scope="col" style="text-align: center;"><b>0.9219</b></td>
+              <td scope="col" style="text-align: center;">0.9542</td>
+              <td scope="col" style="text-align: center;">0.9764</td>
+              <td scope="col" style="text-align: center;"><b>0.9647</b></td>
+              <td scope="col" style="text-align: center;">0.4222</td>
+              <td scope="col" style="text-align: center;">0.3818</td>
+              <td scope="col" style="text-align: center;">0.4103</td>
+              <td scope="col" style="text-align: center;">0.7340</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      
+      <hr style="margin: 20px 0;">
+
+      <div class="table-container">
+        <table class="table" id="RawTable">
+          <thead>
+            <tr>
+              <th scope="col" style="text-align: center;">Model</th>
+              <th scope="col" style="text-align: center;">Multiple Objects</th>
+              <th scope="col" style="text-align: center;">Human Action</th>
+              <th scope="col" style="text-align: center;">Color</th>
+              <th scope="col" style="text-align: center;">Spatial Relationship</th>
+              <th scope="col" style="text-align: center;">Scene</th>
+              <th scope="col" style="text-align: center;">Appearance Style</th>
+              <th scope="col" style="text-align: center;">Temporal Style</th>
+              <th scope="col" style="text-align: center;">Overall Consistency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="col" style="text-align: center;"><b>LaVie</b></td>
+              <td scope="col" style="text-align: center;">0.3332</td>
+              <td scope="col" style="text-align: center;"><b>0.9680</b></td>
+              <td scope="col" style="text-align: center;"><b>0.8639</b></td>
+              <td scope="col" style="text-align: center;">0.3409</td>
+              <td scope="col" style="text-align: center;"><b>0.5269</b></td>
+              <td scope="col" style="text-align: center;"><b>0.2356</b></td>
+              <td scope="col" style="text-align: center;"><b>0.2593</b></td>
+              <td scope="col" style="text-align: center;"><b>0.2641</b></td>
+            </tr>
+            <tr>
+              <td scope="col" style="text-align: center;"><b>ModelScope</b></td>
+              <td scope="col" style="text-align: center;"><b>0.3898</b></td>
+              <td scope="col" style="text-align: center;">0.9240</td>
+              <td scope="col" style="text-align: center;">0.8172</td>
+              <td scope="col" style="text-align: center;">0.3368</td>
+              <td scope="col" style="text-align: center;">0.3926</td>
+              <td scope="col" style="text-align: center;">0.2339</td>
+              <td scope="col" style="text-align: center;">0.2537</td>
+              <td scope="col" style="text-align: center;">0.2567</td>
+            </tr>
+            <tr>
+              <td scope="col" style="text-align: center;"><b>VideoCrafter</b></td>
+              <td scope="col" style="text-align: center;">0.2593</td>
+              <td scope="col" style="text-align: center;">0.9300</td>
+              <td scope="col" style="text-align: center;">0.7884</td>
+              <td scope="col" style="text-align: center;"><b>0.3674</b></td>
+              <td scope="col" style="text-align: center;">0.4336</td>
+              <td scope="col" style="text-align: center;">0.2157</td>
+              <td scope="col" style="text-align: center;">0.2542</td>
+              <td scope="col" style="text-align: center;">0.2521</td>
+            </tr>
+            <tr>
+              <td scope="col" style="text-align: center;"><b>CogVideo</b></td>
+              <td scope="col" style="text-align: center;">0.1811</td>
+              <td scope="col" style="text-align: center;">0.7820</td>
+              <td scope="col" style="text-align: center;">0.7957</td>
+              <td scope="col" style="text-align: center;">0.1824</td>
+              <td scope="col" style="text-align: center;">0.2824</td>
+              <td scope="col" style="text-align: center;">0.2201</td>
+              <td scope="col" style="text-align: center;">0.0780</td>
+              <td scope="col" style="text-align: center;">0.0770</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- BibTeX -->
+<!-- <section class="hero is-light is-small" id="BibTeX" >
+  <div class="container is-max-desktop content" style="margin-top: 40px; margin-bottom: 20px;">
+    <h2 class="title">BibTeX</h2>
+    <p>If you find our work useful, please consider citing our paper:</p>
+    <pre><code>@InProceedings{huang2023vrbench,
+      title = {Evaluation Agent: Efficient and Promptable Evaluation Framework for Visual Generative Models},
+      author = {Zhang, Fan and Tian, Shulin and Huang, Ziqi and Qiao, Yu and Liu, Ziwei},
+      journal={arXiv preprint arXiv:2412.09645},
+      year = {2024}
+} -->
+
+
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://VRBench.github.io/">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/OpenGVLab/VRBench" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. If you want to reuse their <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
