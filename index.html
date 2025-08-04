@@ -61,10 +61,10 @@
                   <a href="https://scholar.google.com/citations?user=iH0Aq0YAAAAJ&hl=zh-CN" target="_blank">Jiashuo Yu</a><sup>1*</sup>,
               </span>
               <span class="author-block">
-                  <a href="_blank" target="_blank">Yue Wu</a><sup>1*</sup>,
+                  <a href="https://github.com/May010129" target="_blank">Yue Wu</a><sup>1*</sup>,
               </span>
               <span class="author-block">
-                  <a href="_blank" target="_blank">Meng Chu</a><sup>1*</sup>,
+                  <a href="https://scholar.google.com/citations?user=D-CKSJAAAAAJ&hl=zh-CN&oi=sra" target="_blank">Meng Chu</a><sup>1*</sup>,
               </span>
               <span class="author-block">
                 <a href="_blank" target="_blank">Zhifei Ren</a><sup>1*</sup>,
@@ -73,7 +73,7 @@
                   <a href="https://scholar.google.com/citations?user=FDqa6T8AAAAJ&hl=zh-CN&oi=ao" target="_blank">Zizheng Huang</a><sup>1, 2*</sup>,
               </span>
               <span class="author-block">
-                <a href="_blank" target="_blank">Pei Chu</a><sup>1*</sup>,
+                <a href="https://scholar.google.com/citations?user=heRj9LoAAAAJ&hl=zh-CN&oi=ao" target="_blank">Pei Chu</a><sup>1*</sup>,
               </span>
               <br>
               <span class="author-block">
@@ -99,7 +99,7 @@
                 <a href="https://conghui.github.io/" target="_blank">Conghui He</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="http://mmlab.siat.ac.cn/yuqiao/index.html" target="_blank">Yu Qiao</a><sup>1</sup>,
+                <a href="https://mmlab.siat.ac.cn/yuqiao" target="_blank">Yu Qiao</a><sup>1</sup>,
               </span>
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=hD948dkAAAAJ&hl=zh-CN" target="_blank">Yali Wang</a><sup>1,3&#8224</sup>,
@@ -182,7 +182,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop" style="width: 50%; max-width: none;">
       <div class="hero-body">
-            <img src="assets/vrbench/images/teaser_arxiv.png" style="width:100%; margin-bottom:10px" alt="Teaser."/>
+            <img src="assets/vrbench/images/teaser_cr.png" style="width:100%; margin-bottom:10px" alt="Teaser."/>
       <p style="margin-top: 0;">
         <b>Overview of VRBench.</b> We present VRBench, a long narrative video benchmark for multi-step reasoning. VRBench includes 1,010 manual-filtered narrative videos, covering 8 languages and 7 video categories that are suitable for reasoning about temporal relations. We also provide high-quality stepwise annotations for reasoning, which are labeled and reviewed by human experts. Each video incorporates 8-10 complex question-answer pairs, multi-step reasoning chain, and fine-grained timestamps. To fully evaluate the capability of models in multi-step reasoning, we propose a multi-phase evaluation pipeline that assesses model results both from the process- and outcome-level. Our VRBench is the first video reasoning benchmark that both supports multi-step annotation and evaluation. 
       </p>
@@ -214,7 +214,7 @@
         <h2 class="title is-3 is-centered">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose VRBench, the first long narrative video benchmark crafted for evaluating large models' multi-step reasoning capabilities, addressing limitations in existing evaluations that overlook temporal reasoning and procedural validity. It comprises 1,010 long videos (with an average duration of 1.6 hours), along with 9,468 human-labeled multi-step question-answering pairs and 30,292 reasoning steps with timestamps. These videos are curated via a multi-stage filtering process including expert inter-rater reviewing to prioritize plot coherence. We develop a human-AI collaborative framework that generates coherent reasoning chains, each requiring multiple temporally grounded steps, spanning seven types (e.g., event attribution, implicit inference). VRBench designs a multi-phase evaluation pipeline that assesses models at both the outcome and process levels. Apart from the MCQs for the final results, we propose a progress-level LLM-guided scoring metric to evaluate the quality of the reasoning chain from multiple dimensions comprehensively. Through extensive evaluations of 12 LLMs and 16 VLMs on VRBench, we undertake a thorough analysis and provide valuable insights that advance the field of multi-step reasoning.
+            We present VRBench, the first long narrative video benchmark crafted for evaluating large models' multi-step reasoning capabilities, addressing limitations in existing evaluations that overlook temporal reasoning and procedural validity. It comprises 960 long videos (with an average duration of 1.6 hours), along with 8,243 human-labeled multi-step question-answering pairs and 25,106 reasoning steps with timestamps. These videos are curated via a multi-stage filtering process including expert inter-rater reviewing to prioritize plot coherence. We develop a human-AI collaborative framework that generates coherent reasoning chains, each requiring multiple temporally grounded steps, spanning seven types (e.g., event attribution, implicit inference). VRBench designs a multi-phase evaluation pipeline that assesses models at both the outcome and process levels. Apart from the MCQs for the final results, we propose a progress-level LLM-guided scoring metric to evaluate the quality of the reasoning chain from multiple dimensions comprehensively. Through extensive evaluations of 12 LLMs and 19 VLMs on VRBench, we undertake a thorough analysis and provide valuable insights that advance the field of multi-step reasoning.
           </p>
         </div>
       </div>
@@ -288,15 +288,15 @@
               <th scope="col" style="text-align: center; font-weight: bold;" colspan="7">Results by Taxonomy</th>
             </tr>
             <tr>
-              <th scope="col" style="text-align: center; font-weight: bold;">MCQ<br>(Outcome)</th>
-              <th scope="col" style="text-align: center; font-weight: bold;">OpenEnd<br>(Process)</th>
-              <th scope="col" style="text-align: center; font-weight: bold;">Event<br>Attribution</th>
-              <th scope="col" style="text-align: center; font-weight: bold;">Counting<br>Problems</th>
-              <th scope="col" style="text-align: center; font-weight: bold;">Hypothetical<br>Reasoning</th>
-              <th scope="col" style="text-align: center; font-weight: bold;">Implicit<br>Inferences</th>
-              <th scope="col" style="text-align: center; font-weight: bold;">Information<br>Synopsis</th>
-              <th scope="col" style="text-align: center; font-weight: bold;">Event<br>Prediction</th>
-              <th scope="col" style="text-align: center; font-weight: bold;">Logical<br>Linkage</th>
+              <th scope="col" style="text-align: center; font-weight: bold;">MCQ-O<br>(Outcome)</th>
+              <th scope="col" style="text-align: center; font-weight: bold;">OE-P<br>(Process)</th>
+              <th scope="col" style="text-align: center; font-weight: bold;">EA<br>(Event Attribution)</th>
+              <th scope="col" style="text-align: center; font-weight: bold;">CP<br>(Counting Problems)</th>
+              <th scope="col" style="text-align: center; font-weight: bold;">HR<br>(Hypothetical Reasoning)</th>
+              <th scope="col" style="text-align: center; font-weight: bold;">II<br>(Implicit Inferences)</th>
+              <th scope="col" style="text-align: center; font-weight: bold;">IS<br>(Information Synopsis)</th>
+              <th scope="col" style="text-align: center; font-weight: bold;">EP<br>(Event Prediction)</th>
+              <th scope="col" style="text-align: center; font-weight: bold;">LL<br>(Logical Linkage)</th>
             </tr>
           </thead>
           <tbody>
@@ -308,55 +308,55 @@
             </tr>
             <tr>
               <td style="text-align: left; white-space: nowrap;">GPT-4o</td>
-              <td style="text-align: center;">59.34</td>
-              <td style="text-align: center;">64.10</td>
-              <td style="text-align: center;">54.57</td>
-              <td style="text-align: center;">54.25</td>
-              <td style="text-align: center;">34.00</td>
-              <td style="text-align: center;">67.92</td>
-              <td style="text-align: center;">63.07</td>
-              <td style="text-align: center;">74.83</td>
-              <td style="text-align: center;">65.64</td>
-              <td style="text-align: center;">70.09</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">o1-preview</td>
-              <td style="text-align: center;">63.64</td>
-              <td style="text-align: center;">70.02</td>
-              <td style="text-align: center;">57.25</td>
-              <td style="text-align: center;">58.67</td>
-              <td style="text-align: center;">34.01</td>
-              <td style="text-align: center;">73.40</td>
-              <td style="text-align: center;">68.71</td>
-              <td style="text-align: center;">72.43</td>
-              <td style="text-align: center;">67.06</td>
-              <td style="text-align: center;"><u>72.69</u></td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">Gemini-2.0-Flash-Thinking</td>
-              <td style="text-align: center;"><u>63.79</u></td>
-              <td style="text-align: center;">69.38</td>
-              <td style="text-align: center;"><u>58.20</u></td>
-              <td style="text-align: center;"><u>63.56</u></td>
-              <td style="text-align: center;">35.78</td>
-              <td style="text-align: center;">72.24</td>
-              <td style="text-align: center;"><u>71.89</u></td>
-              <td style="text-align: center;">75.60</td>
-              <td style="text-align: center;">66.66</td>
-              <td style="text-align: center;">69.99</td>
+              <td style="text-align: center;">55.49</td>
+              <td style="text-align: center;">63.87</td>
+              <td style="text-align: center;">47.11</td>
+              <td style="text-align: center;">54.41</td>
+              <td style="text-align: center;">32.63</td>
+              <td style="text-align: center;">69.03</td>
+              <td style="text-align: center;">61.47</td>
+              <td style="text-align: center;">71.83</td>
+              <td style="text-align: center;">66.37</td>
+              <td style="text-align: center;">66.19</td>
             </tr>
             <tr>
               <td style="text-align: left; white-space: nowrap;">Claude-3.7-Sonnet</td>
-              <td style="text-align: center;">61.50</td>
-              <td style="text-align: center;">67.39</td>
-              <td style="text-align: center;">55.60</td>
-              <td style="text-align: center;">59.23</td>
-              <td style="text-align: center;">36.92</td>
-              <td style="text-align: center;">66.51</td>
-              <td style="text-align: center;">68.33</td>
-              <td style="text-align: center;">69.81</td>
-              <td style="text-align: center;">62.58</td>
-              <td style="text-align: center;">69.03</td>
+              <td style="text-align: center;">58.07</td>
+              <td style="text-align: center;">62.91</td>
+              <td style="text-align: center;">53.23</td>
+              <td style="text-align: center;">55.87</td>
+              <td style="text-align: center;">35.11</td>
+              <td style="text-align: center;">69.83</td>
+              <td style="text-align: center;">63.29</td>
+              <td style="text-align: center;">72.61</td>
+              <td style="text-align: center;">67.91</td>
+              <td style="text-align: center;">67.89</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">o1-preview</td>
+              <td style="text-align: center;">60.14</td>
+              <td style="text-align: center;"><u>68.47</u></td>
+              <td style="text-align: center;">51.81</td>
+              <td style="text-align: center;">56.97</td>
+              <td style="text-align: center;">35.87</td>
+              <td style="text-align: center;">70.51</td>
+              <td style="text-align: center;">64.81</td>
+              <td style="text-align: center;">73.13</td>
+              <td style="text-align: center;">68.27</td>
+              <td style="text-align: center;">69.41</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">Gemini-2.0-Flash-Thinking</td>
+              <td style="text-align: center;"><u>60.97</u></td>
+              <td style="text-align: center;">67.53</td>
+              <td style="text-align: center;"><u>54.41</u></td>
+              <td style="text-align: center;"><u>58.61</u></td>
+              <td style="text-align: center;">38.11</td>
+              <td style="text-align: center;">72.09</td>
+              <td style="text-align: center;"><u>67.57</u></td>
+              <td style="text-align: center;"><u>74.19</u></td>
+              <td style="text-align: center;"><u>70.43</u></td>
+              <td style="text-align: center;"><u>71.13</u></td>
             </tr>
             <tr>
               <td colspan="11" style="border-top: 1px dashed #dbdbdb; padding: 0;"></td>
@@ -365,108 +365,108 @@
               <td colspan="11" style="text-align: left; font-style: italic;">Open-Source Models</td>
             </tr>
             <tr>
-              <td style="text-align: left; white-space: nowrap;">DeepSeek-V3</td>
-              <td style="text-align: center;">60.40</td>
-              <td style="text-align: center;">65.14</td>
-              <td style="text-align: center;">55.65</td>
-              <td style="text-align: center;">55.86</td>
-              <td style="text-align: center;">37.35</td>
-              <td style="text-align: center;">68.72</td>
-              <td style="text-align: center;">65.40</td>
-              <td style="text-align: center;">70.89</td>
-              <td style="text-align: center;">65.95</td>
-              <td style="text-align: center;">69.46</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">DeepSeek-R1</td>
-              <td style="text-align: center;">63.75</td>
-              <td style="text-align: center;"><u>70.26</u></td>
-              <td style="text-align: center;">57.24</td>
-              <td style="text-align: center;">59.00</td>
-              <td style="text-align: center;"><u>39.20</u></td>
-              <td style="text-align: center;"><u>74.04</u></td>
-              <td style="text-align: center;">67.10</td>
-              <td style="text-align: center;">70.05</td>
-              <td style="text-align: center;"><u>70.44</u></td>
-              <td style="text-align: center;">70.73</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">Qwen2.5-7B-Instruct</td>
-              <td style="text-align: center;">50.70</td>
-              <td style="text-align: center;">50.40</td>
-              <td style="text-align: center;">50.99</td>
-              <td style="text-align: center;">47.60</td>
-              <td style="text-align: center;">35.41</td>
-              <td style="text-align: center;">59.58</td>
-              <td style="text-align: center;">56.14</td>
-              <td style="text-align: center;">63.17</td>
-              <td style="text-align: center;">56.99</td>
-              <td style="text-align: center;">60.58</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">Qwen2.5-72B-Instruct</td>
-              <td style="text-align: center;">56.18</td>
-              <td style="text-align: center;">58.44</td>
-              <td style="text-align: center;">53.92</td>
-              <td style="text-align: center;">53.39</td>
-              <td style="text-align: center;">36.61</td>
-              <td style="text-align: center;">64.87</td>
-              <td style="text-align: center;">61.13</td>
-              <td style="text-align: center;">69.71</td>
-              <td style="text-align: center;">60.49</td>
-              <td style="text-align: center;">66.93</td>
-            </tr>
-            <tr>
               <td style="text-align: left; white-space: nowrap;">QwQ-32B-preview</td>
-              <td style="text-align: center;">34.87</td>
-              <td style="text-align: center;">18.41</td>
-              <td style="text-align: center;">51.33</td>
-              <td style="text-align: center;">35.50</td>
-              <td style="text-align: center;">38.50</td>
-              <td style="text-align: center;">44.64</td>
-              <td style="text-align: center;">42.03</td>
-              <td style="text-align: center;">57.38</td>
-              <td style="text-align: center;">41.42</td>
-              <td style="text-align: center;">42.08</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">QwQ-32B</td>
-              <td style="text-align: center;">55.96</td>
-              <td style="text-align: center;">56.14</td>
-              <td style="text-align: center;">55.77</td>
-              <td style="text-align: center;">54.14</td>
-              <td style="text-align: center;">36.93</td>
-              <td style="text-align: center;">62.89</td>
-              <td style="text-align: center;">61.19</td>
-              <td style="text-align: center;">74.96</td>
-              <td style="text-align: center;">62.19</td>
-              <td style="text-align: center;">63.54</td>
+              <td style="text-align: center;">35.90</td>
+              <td style="text-align: center;">27.51</td>
+              <td style="text-align: center;">44.29</td>
+              <td style="text-align: center;">34.31</td>
+              <td style="text-align: center;">34.41</td>
+              <td style="text-align: center;">46.29</td>
+              <td style="text-align: center;">39.67</td>
+              <td style="text-align: center;">27.97</td>
+              <td style="text-align: center;">42.39</td>
+              <td style="text-align: center;">40.61</td>
             </tr>
             <tr>
               <td style="text-align: left; white-space: nowrap;">InternLM3-8B-Instruct</td>
-              <td style="text-align: center;">48.79</td>
-              <td style="text-align: center;">44.97</td>
+              <td style="text-align: center;">47.81</td>
+              <td style="text-align: center;">50.31</td>
+              <td style="text-align: center;">45.31</td>
+              <td style="text-align: center;">45.47</td>
+              <td style="text-align: center;">34.87</td>
+              <td style="text-align: center;">60.33</td>
+              <td style="text-align: center;">51.77</td>
+              <td style="text-align: center;">55.47</td>
+              <td style="text-align: center;">56.97</td>
+              <td style="text-align: center;">56.81</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">Qwen2.5-7B-Instruct</td>
+              <td style="text-align: center;">48.29</td>
               <td style="text-align: center;">52.61</td>
-              <td style="text-align: center;">45.65</td>
-              <td style="text-align: center;">35.65</td>
-              <td style="text-align: center;">57/12</td>
-              <td style="text-align: center;">54.75</td>
-              <td style="text-align: center;">60.58</td>
-              <td style="text-align: center;">53.82</td>
-              <td style="text-align: center;">59.38</td>
+              <td style="text-align: center;">43.97</td>
+              <td style="text-align: center;">46.93</td>
+              <td style="text-align: center;">35.17</td>
+              <td style="text-align: center;">61.83</td>
+              <td style="text-align: center;">51.57</td>
+              <td style="text-align: center;">54.87</td>
+              <td style="text-align: center;">56.63</td>
+              <td style="text-align: center;">57.03</td>
             </tr>
             <tr>
               <td style="text-align: left; white-space: nowrap;">Llama3.3-70B-Instruct</td>
-              <td style="text-align: center;">62.16</td>
-              <td style="text-align: center;">69.68</td>
-              <td style="text-align: center;">54.64</td>
-              <td style="text-align: center;">62.20</td>
-              <td style="text-align: center;">37.54</td>
-              <td style="text-align: center;">71.21</td>
-              <td style="text-align: center;">66.98</td>
-              <td style="text-align: center;"><u>78.04</u></td>
-              <td style="text-align: center;">67.90</td>
-              <td style="text-align: center;">70.39</td>
+              <td style="text-align: center;">49.84</td>
+              <td style="text-align: center;">52.59</td>
+              <td style="text-align: center;">47.09</td>
+              <td style="text-align: center;">47.63</td>
+              <td style="text-align: center;">38.07</td>
+              <td style="text-align: center;">63.87</td>
+              <td style="text-align: center;">54.03</td>
+              <td style="text-align: center;">54.83</td>
+              <td style="text-align: center;">59.47</td>
+              <td style="text-align: center;">56.97</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">QwQ-32B</td>
+              <td style="text-align: center;">52.52</td>
+              <td style="text-align: center;">56.01</td>
+              <td style="text-align: center;">49.03</td>
+              <td style="text-align: center;">49.53</td>
+              <td style="text-align: center;">36.03</td>
+              <td style="text-align: center;">62.01</td>
+              <td style="text-align: center;">54.03</td>
+              <td style="text-align: center;">52.03</td>
+              <td style="text-align: center;">58.01</td>
+              <td style="text-align: center;">59.03</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">Qwen2.5-72B-Instruct</td>
+              <td style="text-align: center;">53.51</td>
+              <td style="text-align: center;">60.49</td>
+              <td style="text-align: center;">46.53</td>
+              <td style="text-align: center;">51.03</td>
+              <td style="text-align: center;">36.01</td>
+              <td style="text-align: center;">67.03</td>
+              <td style="text-align: center;">58.53</td>
+              <td style="text-align: center;">67.83</td>
+              <td style="text-align: center;">61.93</td>
+              <td style="text-align: center;">63.03</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">DeepSeek-V3</td>
+              <td style="text-align: center;">56.06</td>
+              <td style="text-align: center;">64.79</td>
+              <td style="text-align: center;">47.33</td>
+              <td style="text-align: center;">54.03</td>
+              <td style="text-align: center;">36.57</td>
+              <td style="text-align: center;">69.97</td>
+              <td style="text-align: center;">61.83</td>
+              <td style="text-align: center;">69.53</td>
+              <td style="text-align: center;">65.53</td>
+              <td style="text-align: center;">65.43</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">DeepSeek-R1</td>
+              <td style="text-align: center;">57.13</td>
+              <td style="text-align: center;">64.19</td>
+              <td style="text-align: center;">50.07</td>
+              <td style="text-align: center;">56.13</td>
+              <td style="text-align: center;"><u>38.91</u></td>
+              <td style="text-align: center;"><u>72.81</u></td>
+              <td style="text-align: center;">64.13</td>
+              <td style="text-align: center;">68.01</td>
+              <td style="text-align: center;">68.53</td>
+              <td style="text-align: center;">67.93</td>
             </tr>
             <tr>
               <td colspan="11" style="text-align: left; font-weight: bold;">VLMs</td>
@@ -475,43 +475,43 @@
               <td colspan="11" style="text-align: left; font-style: italic;">Proprietary Models</td>
             </tr>
             <tr>
+              <td style="text-align: left; white-space: nowrap;">Claude-3.7-Sonnet</td>
+              <td style="text-align: center;">68.15</td>
+              <td style="text-align: center;">80.09</td>
+              <td style="text-align: center;">56.21</td>
+              <td style="text-align: center;">63.11</td>
+              <td style="text-align: center;">32.97</td>
+              <td style="text-align: center;">72.63</td>
+              <td style="text-align: center;">71.13</td>
+              <td style="text-align: center;">75.37</td>
+              <td style="text-align: center;">71.33</td>
+              <td style="text-align: center;">70.27</td>
+            </tr>
+            <tr>
               <td style="text-align: left; white-space: nowrap;">GPT-4o</td>
-              <td style="text-align: center;">70.68</td>
-              <td style="text-align: center;">83.25</td>
-              <td style="text-align: center;">58.10</td>
-              <td style="text-align: center;">68.63</td>
-              <td style="text-align: center;">38.52</td>
-              <td style="text-align: center;">78.68</td>
-              <td style="text-align: center;">72.45</td>
-              <td style="text-align: center;">80.01</td>
-              <td style="text-align: center;">74.01</td>
-              <td style="text-align: center;">75.19</td>
+              <td style="text-align: center;">68.68</td>
+              <td style="text-align: center;">81.23</td>
+              <td style="text-align: center;">56.13</td>
+              <td style="text-align: center;">66.61</td>
+              <td style="text-align: center;">36.51</td>
+              <td style="text-align: center;">76.67</td>
+              <td style="text-align: center;">70.47</td>
+              <td style="text-align: center;">78.03</td>
+              <td style="text-align: center;">72.03</td>
+              <td style="text-align: center;">73.17</td>
             </tr>
             <tr>
               <td style="text-align: left; white-space: nowrap;">Gemini-2.0-Pro</td>
-              <td style="text-align: center;"><b>76.61</b></td>
-              <td style="text-align: center;">85.32</td>
-              <td style="text-align: center;"><b>67.90</b></td>
-              <td style="text-align: center;"><b>73.11</b></td>
-              <td style="text-align: center;"><b>65.23</b></td>
-              <td style="text-align: center;"><b>83.02</b></td>
-              <td style="text-align: center;"><b>77.74</b></td>
-              <td style="text-align: center;">89.14</td>
-              <td style="text-align: center;"><b>79.94</b></td>
-              <td style="text-align: center;"><b>77.90</b></td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">Claude-3.7-Sonnet</td>
-              <td style="text-align: center;">70.17</td>
-              <td style="text-align: center;">82.10</td>
-              <td style="text-align: center;">58.23</td>
-              <td style="text-align: center;">65.13</td>
-              <td style="text-align: center;">34.98</td>
-              <td style="text-align: center;">74.61</td>
-              <td style="text-align: center;">73.14</td>
-              <td style="text-align: center;">77.38</td>
-              <td style="text-align: center;">73.34</td>
-              <td style="text-align: center;">72.29</td>
+              <td style="text-align: center;"><b>74.61</b></td>
+              <td style="text-align: center;"><b>83.29</b></td>
+              <td style="text-align: center;"><b>65.93</b></td>
+              <td style="text-align: center;"><b>71.09</b></td>
+              <td style="text-align: center;"><b>65.21</b></td>
+              <td style="text-align: center;"><b>81.01</b></td>
+              <td style="text-align: center;"><b>75.73</b></td>
+              <td style="text-align: center;">87.13</td>
+              <td style="text-align: center;"><b>77.93</b></td>
+              <td style="text-align: center;"><b>75.89</b></td>
             </tr>
             <tr>
               <td colspan="11" style="border-top: 1px dashed #dbdbdb; padding: 0;"></td>
@@ -520,173 +520,212 @@
               <td colspan="11" style="text-align: left; font-style: italic;">Open-Source Models</td>
             </tr>
             <tr>
-              <td style="text-align: left; white-space: nowrap;">Qwen2-VL-7B</td>
-              <td style="text-align: center;">60.75</td>
-              <td style="text-align: center;">84.61</td>
-              <td style="text-align: center;">36.88</td>
-              <td style="text-align: center;">59.52</td>
-              <td style="text-align: center;">28.88</td>
-              <td style="text-align: center;">69.14</td>
-              <td style="text-align: center;">66.66</td>
-              <td style="text-align: center;">85.29</td>
-              <td style="text-align: center;">67.34</td>
-              <td style="text-align: center;">71.74</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">Qwen2.5-VL-7B</td>
-              <td style="text-align: center;">63.06</td>
-              <td style="text-align: center;">82.63</td>
-              <td style="text-align: center;">43.49</td>
-              <td style="text-align: center;">60.94</td>
-              <td style="text-align: center;">34.14</td>
-              <td style="text-align: center;">69.69</td>
-              <td style="text-align: center;">67.30</td>
-              <td style="text-align: center;">83.93</td>
-              <td style="text-align: center;">67.23</td>
-              <td style="text-align: center;">71.26</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">Qwen2.5-VL-72B</td>
-              <td style="text-align: center;">69.23</td>
-              <td style="text-align: center;">82.48</td>
-              <td style="text-align: center;">55.98</td>
-              <td style="text-align: center;">65.81</td>
-              <td style="text-align: center;">41.61</td>
-              <td style="text-align: center;">74.54</td>
-              <td style="text-align: center;">69.03</td>
-              <td style="text-align: center;"><b>90.04</b></td>
-              <td style="text-align: center;">71.89</td>
-              <td style="text-align: center;">77.88</td>
-            </tr>
-            <tr>
               <td style="text-align: left; white-space: nowrap;">DeepSeek-VL2</td>
-              <td style="text-align: center;">24.57</td>
-              <td style="text-align: center;">19.65</td>
-              <td style="text-align: center;">29.49</td>
-              <td style="text-align: center;">20.04</td>
-              <td style="text-align: center;">17.69</td>
-              <td style="text-align: center;">23.43</td>
-              <td style="text-align: center;">26.00</td>
-              <td style="text-align: center;">30.02</td>
-              <td style="text-align: center;">23.87</td>
-              <td style="text-align: center;">25.07</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">InternVL2.5-8B</td>
-              <td style="text-align: center;">56.11</td>
-              <td style="text-align: center;">80.61</td>
-              <td style="text-align: center;">31.61</td>
-              <td style="text-align: center;">58.79</td>
-              <td style="text-align: center;">31.40</td>
-              <td style="text-align: center;">62.92</td>
-              <td style="text-align: center;">63.04</td>
-              <td style="text-align: center;">85.99</td>
-              <td style="text-align: center;">62.32</td>
-              <td style="text-align: center;">68.19</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">InternVL2.5-78B</td>
-              <td style="text-align: center;">66.10</td>
-              <td style="text-align: center;">84.82</td>
-              <td style="text-align: center;">47.37</td>
-              <td style="text-align: center;">66.45</td>
-              <td style="text-align: center;">34.48</td>
-              <td style="text-align: center;">74.62</td>
-              <td style="text-align: center;">70.87</td>
-              <td style="text-align: center;">87.54</td>
-              <td style="text-align: center;">71.43</td>
-              <td style="text-align: center;">74.68</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">Phi-3.5-Vision</td>
-              <td style="text-align: center;">48.02</td>
-              <td style="text-align: center;">52.04</td>
-              <td style="text-align: center;">44.00</td>
-              <td style="text-align: center;">43.47</td>
-              <td style="text-align: center;">30.23</td>
-              <td style="text-align: center;">50.27</td>
-              <td style="text-align: center;">50.18</td>
-              <td style="text-align: center;">71.42</td>
-              <td style="text-align: center;">56.16</td>
-              <td style="text-align: center;">46.99</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">Aria</td>
-              <td style="text-align: center;">60.27</td>
-              <td style="text-align: center;">84.07</td>
-              <td style="text-align: center;">36.47</td>
-              <td style="text-align: center;">59.84</td>
-              <td style="text-align: center;">32.88</td>
-              <td style="text-align: center;">70.55</td>
-              <td style="text-align: center;">65.25</td>
-              <td style="text-align: center;">86.21</td>
-              <td style="text-align: center;">67.59</td>
-              <td style="text-align: center;">70.39</td>
+              <td style="text-align: center;">31.50</td>
+              <td style="text-align: center;">33.27</td>
+              <td style="text-align: center;">29.73</td>
+              <td style="text-align: center;">25.93</td>
+              <td style="text-align: center;">22.41</td>
+              <td style="text-align: center;">35.73</td>
+              <td style="text-align: center;">31.73</td>
+              <td style="text-align: center;">30.01</td>
+              <td style="text-align: center;">33.29</td>
+              <td style="text-align: center;">29.57</td>
             </tr>
             <tr>
               <td style="text-align: left; white-space: nowrap;">H2OVL Mississippi-2B</td>
-              <td style="text-align: center;">32.61</td>
-              <td style="text-align: center;">23.43</td>
-              <td style="text-align: center;">41.79</td>
-              <td style="text-align: center;">31.63</td>
-              <td style="text-align: center;">29.72</td>
-              <td style="text-align: center;">38.83</td>
-              <td style="text-align: center;">38.40</td>
-              <td style="text-align: center;">60.05</td>
-              <td style="text-align: center;">39.64</td>
-              <td style="text-align: center;">41.12</td>
+              <td style="text-align: center;">47.15</td>
+              <td style="text-align: center;">52.33</td>
+              <td style="text-align: center;">41.97</td>
+              <td style="text-align: center;">35.17</td>
+              <td style="text-align: center;">32.37</td>
+              <td style="text-align: center;">51.71</td>
+              <td style="text-align: center;">41.41</td>
+              <td style="text-align: center;">60.03</td>
+              <td style="text-align: center;">49.97</td>
+              <td style="text-align: center;">41.91</td>
             </tr>
             <tr>
-              <td style="text-align: left; white-space: nowrap;">VideoChat-Flash-7B</td>
-              <td style="text-align: center;">57.30</td>
-              <td style="text-align: center;">84.81</td>
-              <td style="text-align: center;">29.79</td>
-              <td style="text-align: center;">60.88</td>
-              <td style="text-align: center;">33.45</td>
-              <td style="text-align: center;">63.67</td>
-              <td style="text-align: center;">63.36</td>
-              <td style="text-align: center;">79.36</td>
-              <td style="text-align: center;">63.87</td>
-              <td style="text-align: center;">64.97</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; white-space: nowrap;">InternVideo2.5</td>
-              <td style="text-align: center;">56.89</td>
-              <td style="text-align: center;"><b>85.35</b></td>
-              <td style="text-align: center;">28.46</td>
-              <td style="text-align: center;">60.54</td>
-              <td style="text-align: center;">33.16</td>
-              <td style="text-align: center;">64.50</td>
-              <td style="text-align: center;">63.83</td>
-              <td style="text-align: center;">84.59</td>
-              <td style="text-align: center;">62.42</td>
-              <td style="text-align: center;">64.58</td>
+              <td style="text-align: left; white-space: nowrap;">Phi-3.5-Vision</td>
+              <td style="text-align: center;">48.52</td>
+              <td style="text-align: center;">58.03</td>
+              <td style="text-align: center;">39.01</td>
+              <td style="text-align: center;">31.53</td>
+              <td style="text-align: center;">28.03</td>
+              <td style="text-align: center;">45.03</td>
+              <td style="text-align: center;">37.03</td>
+              <td style="text-align: center;">68.03</td>
+              <td style="text-align: center;">44.03</td>
+              <td style="text-align: center;">36.03</td>
             </tr>
             <tr>
               <td style="text-align: left; white-space: nowrap;">LongVA-7B</td>
-              <td style="text-align: center;">56.57</td>
-              <td style="text-align: center;">80.74</td>
-              <td style="text-align: center;">32.40</td>
-              <td style="text-align: center;">56.63</td>
-              <td style="text-align: center;">28.06</td>
-              <td style="text-align: center;">63.33</td>
-              <td style="text-align: center;">63.33</td>
-              <td style="text-align: center;">76.93</td>
-              <td style="text-align: center;">62.63</td>
-              <td style="text-align: center;">66.80</td>
+              <td style="text-align: center;">50.14</td>
+              <td style="text-align: center;">67.81</td>
+              <td style="text-align: center;">32.47</td>
+              <td style="text-align: center;">27.61</td>
+              <td style="text-align: center;">25.07</td>
+              <td style="text-align: center;">38.69</td>
+              <td style="text-align: center;">33.77</td>
+              <td style="text-align: center;">76.91</td>
+              <td style="text-align: center;">38.27</td>
+              <td style="text-align: center;">32.07</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">InternVL2.5-8B</td>
+              <td style="text-align: center;">50.41</td>
+              <td style="text-align: center;">69.31</td>
+              <td style="text-align: center;">31.51</td>
+              <td style="text-align: center;">26.63</td>
+              <td style="text-align: center;">26.31</td>
+              <td style="text-align: center;">37.99</td>
+              <td style="text-align: center;">31.21</td>
+              <td style="text-align: center;">85.97</td>
+              <td style="text-align: center;">37.37</td>
+              <td style="text-align: center;">30.69</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">MiMo-VL-7B-RL</td>
+              <td style="text-align: center;">50.48</td>
+              <td style="text-align: center;">63.39</td>
+              <td style="text-align: center;">37.57</td>
+              <td style="text-align: center;">47.31</td>
+              <td style="text-align: center;">34.59</td>
+              <td style="text-align: center;">63.83</td>
+              <td style="text-align: center;">53.23</td>
+              <td style="text-align: center;">74.61</td>
+              <td style="text-align: center;">60.33</td>
+              <td style="text-align: center;">56.97</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">VideoChat-Flash-7B</td>
+              <td style="text-align: center;">50.82</td>
+              <td style="text-align: center;">72.01</td>
+              <td style="text-align: center;">29.63</td>
+              <td style="text-align: center;">24.69</td>
+              <td style="text-align: center;">21.41</td>
+              <td style="text-align: center;">39.37</td>
+              <td style="text-align: center;">29.17</td>
+              <td style="text-align: center;">79.37</td>
+              <td style="text-align: center;">34.87</td>
+              <td style="text-align: center;">28.07</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">InternVideo2.5</td>
+              <td style="text-align: center;">51.94</td>
+              <td style="text-align: center;">75.63</td>
+              <td style="text-align: center;">28.25</td>
+              <td style="text-align: center;">23.81</td>
+              <td style="text-align: center;">24.09</td>
+              <td style="text-align: center;">34.51</td>
+              <td style="text-align: center;">27.07</td>
+              <td style="text-align: center;">84.57</td>
+              <td style="text-align: center;">33.61</td>
+              <td style="text-align: center;">26.81</td>
             </tr>
             <tr>
               <td style="text-align: left; white-space: nowrap;">LongVA-7B-DPO</td>
-              <td style="text-align: center;">58.79</td>
-              <td style="text-align: center;">80.93</td>
-              <td style="text-align: center;">36.65</td>
-              <td style="text-align: center;">57.10</td>
-              <td style="text-align: center;">27.42</td>
-              <td style="text-align: center;">65.79</td>
-              <td style="text-align: center;">65.21</td>
-              <td style="text-align: center;">79.37</td>
-              <td style="text-align: center;">64.67</td>
-              <td style="text-align: center;">68.56</td>
+              <td style="text-align: center;">52.36</td>
+              <td style="text-align: center;">67.91</td>
+              <td style="text-align: center;">36.81</td>
+              <td style="text-align: center;">30.73</td>
+              <td style="text-align: center;">27.17</td>
+              <td style="text-align: center;">45.09</td>
+              <td style="text-align: center;">38.23</td>
+              <td style="text-align: center;">79.39</td>
+              <td style="text-align: center;">43.67</td>
+              <td style="text-align: center;">37.03</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">Qwen2-VL-7B</td>
+              <td style="text-align: center;">54.08</td>
+              <td style="text-align: center;">72.01</td>
+              <td style="text-align: center;">36.15</td>
+              <td style="text-align: center;">30.49</td>
+              <td style="text-align: center;">26.61</td>
+              <td style="text-align: center;">46.71</td>
+              <td style="text-align: center;">33.69</td>
+              <td style="text-align: center;">85.27</td>
+              <td style="text-align: center;">43.31</td>
+              <td style="text-align: center;">35.29</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">Aria</td>
+              <td style="text-align: center;">54.55</td>
+              <td style="text-align: center;">72.97</td>
+              <td style="text-align: center;">36.13</td>
+              <td style="text-align: center;">30.19</td>
+              <td style="text-align: center;">29.23</td>
+              <td style="text-align: center;">44.23</td>
+              <td style="text-align: center;">34.63</td>
+              <td style="text-align: center;">86.23</td>
+              <td style="text-align: center;">44.99</td>
+              <td style="text-align: center;">34.57</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">Qwen2.5-VL-7B</td>
+              <td style="text-align: center;">56.52</td>
+              <td style="text-align: center;">69.61</td>
+              <td style="text-align: center;">43.43</td>
+              <td style="text-align: center;">37.07</td>
+              <td style="text-align: center;">33.17</td>
+              <td style="text-align: center;">54.27</td>
+              <td style="text-align: center;">42.27</td>
+              <td style="text-align: center;">83.91</td>
+              <td style="text-align: center;">50.17</td>
+              <td style="text-align: center;">42.87</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">Keye-VL-8B-Preview</td>
+              <td style="text-align: center;">60.44</td>
+              <td style="text-align: center;">64.41</td>
+              <td style="text-align: center;">56.47</td>
+              <td style="text-align: center;">62.53</td>
+              <td style="text-align: center;">40.37</td>
+              <td style="text-align: center;">73.61</td>
+              <td style="text-align: center;">67.99</td>
+              <td style="text-align: center;">70.13</td>
+              <td style="text-align: center;">71.83</td>
+              <td style="text-align: center;">71.03</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">Qwen2.5-VL-72B</td>
+              <td style="text-align: center;">61.71</td>
+              <td style="text-align: center;">66.85</td>
+              <td style="text-align: center;">56.57</td>
+              <td style="text-align: center;">51.87</td>
+              <td style="text-align: center;">46.13</td>
+              <td style="text-align: center;">67.13</td>
+              <td style="text-align: center;">54.13</td>
+              <td style="text-align: center;"><b>90.04</b></td>
+              <td style="text-align: center;">63.67</td>
+              <td style="text-align: center;">60.77</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">Kimi-VL-A3B-Thinking-2506</td>
+              <td style="text-align: center;">61.82</td>
+              <td style="text-align: center;">61.67</td>
+              <td style="text-align: center;">61.97</td>
+              <td style="text-align: center;">64.53</td>
+              <td style="text-align: center;">47.91</td>
+              <td style="text-align: center;">71.37</td>
+              <td style="text-align: center;">69.57</td>
+              <td style="text-align: center;">74.47</td>
+              <td style="text-align: center;">71.23</td>
+              <td style="text-align: center;">71.47</td>
+            </tr>
+            <tr>
+              <td style="text-align: left; white-space: nowrap;">InternVL2.5-78B</td>
+              <td style="text-align: center;">62.31</td>
+              <td style="text-align: center;">76.61</td>
+              <td style="text-align: center;">48.01</td>
+              <td style="text-align: center;">43.77</td>
+              <td style="text-align: center;">38.67</td>
+              <td style="text-align: center;">58.21</td>
+              <td style="text-align: center;">46.13</td>
+              <td style="text-align: center;">87.53</td>
+              <td style="text-align: center;">54.43</td>
+              <td style="text-align: center;">47.57</td>
             </tr>
           </tbody>
         </table>
